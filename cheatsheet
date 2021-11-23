@@ -1,0 +1,42 @@
+//ASCII codes:
+
+0x0A : '\n' 
+
+
+
+
+
+//sys_write: writes msg_len bytes from msg to stdout
+mov eax, 4   		; syscall number (sys_write)
+mov ebx, 1   		; file descriptor (stdout)
+mov ecx, msg 		; message
+mov edx, msg_len 	; length of the message
+int 0x80
+
+
+
+
+//////////////////////////////////
+
+
+//sys_read: reads len bytes from stdin and stores them in var
+mov eax, 3 		; syscall number (sys_read)
+mov ebx, 2		; file descriptor (stdin)
+mov ecx, var		; read data --> &var
+mov edx, len 		; read len bytes	
+
+git token : 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
+
+
+
+
+
+
+
+
+
+
+
+
+
+
