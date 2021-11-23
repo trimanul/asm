@@ -1,0 +1,10 @@
+#!/bin/bash
+
+src=${1?"No source filename was given."}
+dst=${2?"Error: no executable filename was given."}
+
+nasm -f elf -o objfile.o -g -F dwarf $src
+ld -o $dst objfile.o
+rm objfile.o
+
+echo "Complete"
